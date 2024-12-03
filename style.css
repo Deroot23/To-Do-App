@@ -1,0 +1,144 @@
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f7c3c7, #fad0c4); 
+    color: #333;
+    flex-direction: column;
+}
+.todo-app {
+    width: 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-out; 
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.todo-input {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 12px;
+    height: 15px;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.todo-input input:focus {
+    border-color: #28a745; 
+}
+
+
+.todo-input button {
+    padding: 5px 25px;
+    height: 40px;
+    font-size: 1.2em;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.todo-input button:hover {
+    background: #218838; 
+    transform: scale(1.05); 
+}
+
+.todo-input button:active {
+    background: #1e7e34; 
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+#taskList li:hover {
+    background-color: #f1f1f1; 
+}
+
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+button.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.delete-btn:hover {
+    background: #c82333;
+    transform: scale(1.05); 
+}
+
+button.delete-btn:active {
+    background: #bd2130; 
+}
+
+.footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 1.1em;
+    background: #333;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
